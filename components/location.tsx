@@ -6,23 +6,22 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Endereço",
-    value: "Rua Vidal João Vieira - Centro \nSão Pedro de Alcântara - SC, 88125-000",
+    value: "Rua Vidal João Vieira - lot.13 - Centro \nSão Pedro de Alcântara - SC, 88125-000",
   },
-  
+  {
+    icon: Instagram,
+    label: "Instagram",
+    value: "@fabianofisiospa",
+  },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "(48) 99999-0000",
-  },
-  {
-    icon: Mail,
-    label: "E-mail",
-    value: "contato@fabianofisio.com.br",
+    value: "(48) 99658-0677",
   },
   {
     icon: Clock,
     label: "Horário de Funcionamento",
-    value: "Seg a Sex: 06h às 22h\nSábado: 08h às 14h",
+    value: "Seg a Sex: 06h às 21h\nSábado: 09:30h às 11:30h",
   },
 ]
 
@@ -36,21 +35,21 @@ export function Location() {
             Venha nos visitar
           </h2>
           <p className="text-muted-foreground text-lg text-pretty">
-            Estamos localizados no coração de Antônio Carlos, com fácil acesso e estacionamento.
+            Estamos localizados no coração de São Pedro de Alcântara, com fácil acesso e estacionamento.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="rounded-2xl overflow-hidden h-96 lg:h-auto bg-secondary relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14190.516951645845!2d-48.77532455!3d-27.517861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273f90c3e4e3c3%3A0x7b02e68f27cb5a23!2sAnt%C3%B4nio%20Carlos%2C%20SC%2C%2088180-000!5e0!3m2!1spt-BR!2sbr!4v1713544800000!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps?hl=pt-BR&q=Academia+Fabiano,+S%C3%A3o+Pedro+de+Alc%C3%A2ntara,+SC&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "400px" }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização FabianoFisio - Antônio Carlos/SC"
+              title="Localização Academia Fabiano - São Pedro de Alcântara/SC"
               className="rounded-2xl"
             />
           </div>
@@ -69,29 +68,6 @@ export function Location() {
                 </div>
               </div>
             ))}
-
-            <div className="pt-6 flex flex-col sm:flex-row gap-4">
-              <Button asChild variant="outline" size="lg" className="flex-1">
-                <Link
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram className="w-5 h-5 mr-2" />
-                  Instagram
-                </Link>
-              </Button>
-              <Button asChild size="lg" className="flex-1">
-                <Link 
-                  href="https://wa.me/5548999990000?text=Olá! Gostaria de saber mais sobre a academia."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Falar no WhatsApp
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>

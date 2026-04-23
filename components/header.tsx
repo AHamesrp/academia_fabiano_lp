@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const WHATSAPP_URL = "https://wa.me/5548999990000?text=Olá! Gostaria de me matricular na academia."
+const WHATSAPP_URL = "https://wa.me/5548996580677?text=Olá! Gostaria de me matricular na academia."
 
 const navLinks = [
   { href: "/#sobre", label: "Sobre" },
@@ -19,10 +19,10 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-1 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center">
+        <div className="relative flex h-16 lg:h-20 items-center justify-between">
+          <Link href="/" className="relative z-10 flex shrink-0 items-center">
             <Image
               src="/images/logo.jpg"
               alt="FabianoFisio Esporte e Saúde"
@@ -33,19 +33,21 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="pointer-events-none absolute inset-0 hidden lg:flex items-center justify-center">
+            <nav className="pointer-events-auto flex items-center gap-15">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
-          <div className="flex items-center gap-4">
+          <div className="relative z-10 flex items-center gap-4">
             <Button asChild className="hidden sm:inline-flex">
               <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Matricule-se Agora

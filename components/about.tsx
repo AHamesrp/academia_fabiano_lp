@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { CheckCircle2 } from "lucide-react"
 
 const features = [
@@ -38,24 +39,19 @@ export function About() {
               ))}
             </div>
           </div>
-
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-secondary overflow-hidden relative">
-              <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-4xl font-bold text-primary">FF</span>
-                  </div>
-                  <p className="text-muted-foreground text-lg">Estrutura Completa</p>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">+10</div>
-                <div className="text-xs text-muted-foreground">Anos de<br/>experiência</div>
-              </div>
+            <div className="aspect-4/3 rounded-2xl overflow-hidden relative lg:aspect-5/4">
+              <Image
+                src="/images/about-fachada.png"
+                alt="Fachada da FabianoFisio Esporte e Saude"
+                fill
+                className="object-cover"
+              />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-linear-to-b from-background/72 via-background/24 to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-background/80 via-background/30 to-transparent" />
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-linear-to-r from-background/60 via-background/20 to-transparent" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-background/60 via-background/20 to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-radial-[ellipse_at_center] from-transparent via-transparent to-background/14" />
             </div>
           </div>
         </div>
