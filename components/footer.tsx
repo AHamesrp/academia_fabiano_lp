@@ -16,7 +16,7 @@ export function Footer() {
             />
           </Link>
           <p className="text-muted-foreground text-sm max-w-lg">
-            Sua academia completa em Antônio Carlos/SC. Saúde, esporte e bem-estar em um só lugar.
+            Sua academia completa em São Pedro de Alcântara/SC. Saúde, esporte e bem-estar em um só lugar.
           </p>
         </div>
 
