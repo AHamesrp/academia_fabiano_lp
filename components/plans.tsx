@@ -1,5 +1,7 @@
 "use client"
 
+const WHATSAPP_NUMBER = "5548996580677"
+
 type PlanCategory = "hidroginastica" | "natacao" | "pilates" | "fisioterapia" | "musculacao"
 
 interface PlanOption {
@@ -22,8 +24,8 @@ const plans: PlanData[] = [
     name: "Hidroginástica",
     description: "Exercícios aquáticos de baixo impacto, ideais para todas as idades e condicionamentos físicos.",
     options: [
-      { frequency: "2x", price: "220" },
-      { frequency: "3x", price: "280" },
+      { frequency: "2x", price: "240" },
+      { frequency: "3x", price: "300" },
     ],
   },
   {
@@ -31,8 +33,8 @@ const plans: PlanData[] = [
     name: "Natação Infantil",
     description: "Aulas especializadas para crianças, desenvolvendo habilidades aquáticas de forma segura e divertida.",
     options: [
-      { frequency: "2x", price: "200" },
-      { frequency: "3x", price: "260" },
+      { frequency: "2x", price: "220" },
+      { frequency: "3x", price: "280" },
     ],
   },
   {
@@ -59,37 +61,45 @@ const plans: PlanData[] = [
     name: "Musculação",
     description: "Treinos orientados para ganho de força, condicionamento físico e melhoria da saúde com acompanhamento profissional.",
     options: [
-      { frequency: "Livre", price: "150", note: "Mensal" },
-      { frequency: "Personal", price: "320", note: "2x semana" },
+      { frequency: "Individual", price: "150", note: "Mensal" },
+      { frequency: "Casal Família", price: "130", note: "Mensal" },
     ],
   },
 ]
 
 function PlanCard({ plan }: { plan: PlanData }) {
+  const isMusculacao = plan.id === "musculacao"
+  const whatsappMessage = `Olá, escolhi o ${plan.name} pelo site, quando posso começar?`
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`
+
   return (
-    <div className="text-center h-full bg-card border border-border rounded-2xl p-8">
-      <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+    <div className="group text-center h-full bg-card border border-border rounded-2xl p-6 xl:p-5 flex flex-col">
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
         {plan.name}
       </h3>
-      <p className="text-muted-foreground text-sm mb-8">{plan.description}</p>
+      <p className="text-muted-foreground text-sm mb-6 min-h-[84px]">{plan.description}</p>
 
-      <div className="space-y-8">
+      <div className="space-y-6">
         {plan.options.map((option, index) => (
-          <div key={index} className="flex items-center justify-center gap-6">
-            <div className="text-right">
-              <span className="text-primary text-3xl sm:text-4xl font-bold italic">
+          <div key={index} className="flex min-h-[92px] items-stretch justify-center gap-4">
+            <div className="flex flex-col justify-center text-right">
+              <span
+                className={`text-primary font-bold italic leading-tight ${
+                  isMusculacao ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"
+                }`}
+              >
                 {option.frequency}
               </span>
               {option.note ? (
-                <span className="block text-foreground text-lg">{option.note}</span>
+                <span className="block text-foreground text-base">{option.note}</span>
               ) : (
-                <span className="block text-foreground text-lg">na<br />semana</span>
+                <span className="block text-foreground text-base">na<br />semana</span>
               )}
             </div>
-            <div className="w-px h-16 bg-primary" />
-            <div className="text-left">
-              <span className="text-muted-foreground text-xl align-top">R$</span>
-              <span className="text-foreground text-5xl sm:text-6xl font-bold">
+            <div className="w-px self-stretch bg-primary" />
+            <div className="flex flex-col justify-center text-left">
+              <span className="text-muted-foreground text-lg align-top">R$</span>
+              <span className="text-foreground text-4xl sm:text-5xl font-bold">
                 {option.price}
               </span>
             </div>
@@ -98,10 +108,21 @@ function PlanCard({ plan }: { plan: PlanData }) {
       </div>
 
       {plan.extra && (
-        <p className="text-muted-foreground mt-8 text-sm">
+        <p className="text-muted-foreground mt-6 text-sm">
           {plan.extra}
         </p>
       )}
+
+      <div className="mt-auto pt-6">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-xl border border-primary/70 bg-primary/10 px-4 py-3 text-sm font-semibold leading-none text-primary opacity-0 translate-y-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-hover:bg-primary/20"
+        >
+          Escolher este
+        </a>
+      </div>
     </div>
   )
 }
@@ -119,7 +140,7 @@ export function Plans() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-5 gap-4">
           {plans.map((plan) => (
             <PlanCard key={plan.id} plan={plan} />
           ))}
