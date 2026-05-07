@@ -1,6 +1,6 @@
 "use client"
 
-type PlanCategory = "hidroginastica" | "natacao" | "pilates" | "fisioterapia"
+type PlanCategory = "hidroginastica" | "natacao" | "pilates" | "fisioterapia" | "musculacao"
 
 interface PlanOption {
   frequency: string
@@ -52,6 +52,15 @@ const plans: PlanData[] = [
     options: [
       { frequency: "Pacote 10", price: "550", note: "Sessões" },
       { frequency: "Sessão", price: "80", note: "Única" },
+    ],
+  },
+  {
+    id: "musculacao",
+    name: "Musculação",
+    description: "Treinos orientados para ganho de força, condicionamento físico e melhoria da saúde com acompanhamento profissional.",
+    options: [
+      { frequency: "Livre", price: "150", note: "Mensal" },
+      { frequency: "Personal", price: "320", note: "2x semana" },
     ],
   },
 ]
