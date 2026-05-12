@@ -6,7 +6,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Endereço",
-    value: "Rua Vidal João Vieira - lot.13 - Centro \nSão Pedro de Alcântara - SC, 88125-000",
+    value: "Rua Vidal João Vieira - Centro \nSão Pedro de Alcântara - SC, 88125-000",
   },
   {
     icon: Instagram,
