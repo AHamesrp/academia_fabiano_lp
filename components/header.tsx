@@ -24,7 +24,7 @@ export function Header() {
         <div className="relative flex h-16 lg:h-20 items-center justify-between">
           <Link href="/" className="relative z-10 flex shrink-0 items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/logo2.jpg"
               alt="FabianoFisio Esporte e Saúde"
               width={160}
               height={50}

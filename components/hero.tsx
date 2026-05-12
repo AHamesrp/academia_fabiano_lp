@@ -1,9 +1,8 @@
 import Image from "next/image"
-import logo from "../logo.png"
 
 export function Hero() {
   return (
-    <section className="relative flex items-start justify-center overflow-hidden pt-12 pb-16 lg:pt-24 lg:pb-24">
+    <section className="relative flex items-start justify-center overflow-hidden pt-28 pb-16 lg:pt-40 lg:pb-24">
       <div className="absolute inset-0 bg-linear-to-b from-background via-background to-card" />
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl" />
@@ -14,8 +13,10 @@ export function Hero() {
         <div className="grid items-center gap-8 lg:grid-cols-[680px_minmax(0,760px)] lg:justify-center lg:gap-6 lg:-translate-x-6">
           <div className="mx-auto w-full max-w-[680px] rounded-2xl bg-black/85 p-10">
             <Image
-              src={logo}
+              src="/images/logo.jpg"
               alt="Logo Fabiano Fisio"
+              width={800}
+              height={800}
               className="h-auto w-full object-contain"
               priority
             />
