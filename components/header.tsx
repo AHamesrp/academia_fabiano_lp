@@ -10,7 +10,7 @@ const WHATSAPP_URL = "https://wa.me/5548996580677?text=Olá! Gostaria de me matr
 
 const navLinks = [
   { href: "/#sobre", label: "Sobre" },
-  { href: "/#diferencial", label: "Diferencial" },
+  // { href: "/#diferencial", label: "Diferencial" }, // oculto até escalar (mesma lógica da home)
   { href: "/#planos", label: "Planos" },
   { href: "/#contato", label: "Contato" },
 ]
