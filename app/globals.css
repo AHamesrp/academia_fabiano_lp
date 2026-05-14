@@ -123,3 +123,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes hero-bg-carousel {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.hero-bg-carousel__track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  height: 100%;
+  will-change: transform;
+  animation: hero-bg-carousel 100s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-carousel__track {
+    animation: none;
+    transform: translate3d(-12%, 0, 0);
+  }
+}

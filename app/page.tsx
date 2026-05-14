@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { HeroScrollZone } from "@/components/hero-scroll-zone"
 import { About } from "@/components/about"
 // import { Diferencial } from "@/components/diferencial" // seção oculta até escalar — componente em @/components/diferencial
 import { Plans } from "@/components/plans"
@@ -11,8 +12,10 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <Hero />
-        <About />
+        <HeroScrollZone>
+          <Hero />
+          <About />
+        </HeroScrollZone>
         {/* <Diferencial /> */}
         <Plans />
         <Location />
