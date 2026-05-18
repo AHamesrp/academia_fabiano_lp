@@ -1,6 +1,10 @@
 import Image from "next/image"
 import { CheckCircle2 } from "lucide-react"
 
+import sobreBg from "@/image_dentro/sobre.png"
+
+const aboutBgImageClass = "object-cover object-center scale-[1.03]"
+
 const features = [
   "Todas as atividades reunidas em um único espaço",
   "Salas e ambientes especializados para cada modalidade",
@@ -12,11 +16,23 @@ const features = [
 
 export function About() {
   return (
-    <section
-      id="sobre"
-      className="py-24 lg:py-32 bg-card/78 backdrop-blur-md supports-backdrop-filter:bg-card/65"
-    >
-      <div className="container mx-auto px-4">
+    <section id="sobre" className="relative overflow-hidden py-24 lg:py-32">
+      <div className="absolute inset-0 z-0 overflow-hidden bg-zinc-950" aria-hidden>
+        <Image
+          src={sobreBg}
+          alt=""
+          fill
+          sizes="100vw"
+          quality={75}
+          className={aboutBgImageClass}
+        />
+      </div>
+      <div
+        className="pointer-events-none absolute inset-0 z-1 bg-card/78 backdrop-blur-[2.5px] supports-backdrop-filter:bg-card/75"
+        aria-hidden
+      />
+
+      <div className="container relative z-10 mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
             <span className="text-primary font-medium text-sm uppercase tracking-wider">Sobre a Academia</span>

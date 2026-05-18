@@ -73,15 +73,15 @@ function PlanCard({ plan }: { plan: PlanData }) {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
-    <div className="group text-center h-full bg-card border border-border rounded-2xl p-6 xl:p-5 flex flex-col">
-      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+    <div className="mx-auto flex h-auto w-full max-w-sm flex-col rounded-2xl border border-border bg-card p-4 text-center sm:mx-0 sm:h-full sm:max-w-none sm:p-6 xl:p-5">
+      <h3 className="mb-2 text-xl font-bold text-foreground sm:mb-3 sm:text-2xl">
         {plan.name}
       </h3>
-      <p className="text-muted-foreground text-sm mb-6 min-h-[84px]">{plan.description}</p>
+      <p className="mb-4 text-sm text-muted-foreground sm:mb-6 sm:min-h-[84px]">{plan.description}</p>
 
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {plan.options.map((option, index) => (
-          <div key={index} className="flex min-h-[92px] items-stretch justify-center gap-4">
+          <div key={index} className="flex items-stretch justify-center gap-4 sm:min-h-[92px]">
             <div className="flex flex-col justify-center text-right">
               <span
                 className={`text-primary font-bold italic leading-tight ${
@@ -108,17 +108,17 @@ function PlanCard({ plan }: { plan: PlanData }) {
       </div>
 
       {plan.extra && (
-        <p className="text-muted-foreground mt-6 text-sm">
+        <p className="mt-4 text-sm text-muted-foreground sm:mt-6">
           {plan.extra}
         </p>
       )}
 
-      <div className="mt-auto pt-6">
+      <div className="mt-auto flex justify-center pt-4 sm:block sm:pt-6">
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center rounded-xl border border-primary/70 bg-primary/10 px-4 py-3 text-sm font-semibold leading-none text-primary opacity-0 translate-y-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-hover:bg-primary/20"
+          className="inline-flex min-h-11 w-auto items-center justify-center rounded-xl bg-primary px-10 py-4 text-sm font-semibold leading-normal text-primary-foreground transition-colors hover:bg-primary/90 sm:w-full sm:min-h-10 sm:px-4 sm:py-3.5"
         >
           Escolher este
         </a>
