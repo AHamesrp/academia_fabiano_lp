@@ -24,14 +24,14 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[100] border-b border-border bg-background">
+    <header className="fixed inset-x-0 top-0 z-100 border-b border-border bg-background">
       {/* safe-area movido para cá dentro, fora do isolate */}
       <div className="relative bg-background/95 backdrop-blur-md pt-[env(safe-area-inset-top,0px)]">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between lg:h-20">
             <button
               type="button"
-              className="relative z-[110] flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-md text-foreground active:bg-muted/60 pointer-events-auto"
+              className="relative z-350 flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-md text-foreground active:bg-muted/60 pointer-events-auto"
               onClick={() => setMenuOpen((open) => !open)}
               aria-expanded={menuOpen}
               aria-controls="site-nav-menu"
