@@ -1,1 +1,1 @@
-melhorar a gradiencia das fotos do carrosel
+teste
