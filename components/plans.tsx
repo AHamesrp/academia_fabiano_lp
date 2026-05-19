@@ -129,7 +129,7 @@ function PlanCard({ plan }: { plan: PlanData }) {
 
 export function Plans() {
   return (
-    <section id="planos" className="py-24 lg:py-32 bg-background">
+    <section id="planos" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">

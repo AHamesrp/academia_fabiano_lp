@@ -27,7 +27,7 @@ const contactInfo = [
 
 export function Location() {
   return (
-    <section id="localizacao" className="py-24 lg:py-32 bg-card">
+    <section id="localizacao" className="py-8 lg:py-32 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">Localização</span>
@@ -40,7 +40,7 @@ export function Location() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="rounded-2xl overflow-hidden h-96 lg:h-auto bg-secondary relative">
+          <div className="rounded-2xl overflow-hidden h-86 lg:h-auto bg-secondary relative">
             <iframe
               src="https://www.google.com/maps?hl=pt-BR&q=Academia+Fabiano,+S%C3%A3o+Pedro+de+Alc%C3%A2ntara,+SC&z=17&output=embed"
               width="100%"

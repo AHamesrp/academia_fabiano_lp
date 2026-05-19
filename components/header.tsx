@@ -15,7 +15,7 @@ const navLinkClass =
 const navLinks = [
   { href: "/", label: "Início" },
   { href: "/#sobre", label: "Sobre" },
-  // { href: "/#diferencial", label: "Diferencial" }, // oculto até escalar (mesma lógica da home)
+  // { href: "/#diferencial", label: "Diferencial" },
   { href: "/#planos", label: "Planos" },
   { href: "/#contato", label: "Contato" },
 ]
@@ -24,13 +24,14 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[100] isolate border-b border-border bg-background pt-[env(safe-area-inset-top,0px)]">
-      <div className="relative bg-background/95 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-[100] border-b border-border bg-background">
+      {/* safe-area movido para cá dentro, fora do isolate */}
+      <div className="relative bg-background/95 backdrop-blur-md pt-[env(safe-area-inset-top,0px)]">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between lg:h-20">
             <button
               type="button"
-              className="relative z-10 flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-md text-foreground active:bg-muted/60"
+              className="relative z-[110] flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-md text-foreground active:bg-muted/60 pointer-events-auto"
               onClick={() => setMenuOpen((open) => !open)}
               aria-expanded={menuOpen}
               aria-controls="site-nav-menu"
@@ -39,7 +40,7 @@ export function Header() {
               {menuOpen ? <X className="h-6 w-6" aria-hidden /> : <Menu className="h-6 w-6" aria-hidden />}
             </button>
 
-            <Button asChild className="relative z-10 shrink-0 text-xs sm:text-sm">
+            <Button asChild className="relative z-[110] shrink-0 text-xs sm:text-sm max-w-[160px]">
               <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Matricule-se Agora
               </Link>
@@ -50,7 +51,7 @@ export function Header() {
         {menuOpen && (
           <nav
             id="site-nav-menu"
-            className="absolute inset-x-0 top-full z-20 border-t border-border bg-background shadow-lg"
+            className="absolute inset-x-0 top-full z-[200] border-t border-border bg-background shadow-lg"
             aria-label="Navegação principal"
           >
             <div className="container mx-auto flex flex-col gap-1 px-4 py-3">

@@ -16,7 +16,7 @@ const features = [
 
 export function About() {
   return (
-    <section id="sobre" className="relative overflow-hidden py-24 lg:py-32">
+    <section id="sobre" className="relative overflow-hidden py-20 lg:py-32">
       <div className="absolute inset-0 z-0 overflow-hidden bg-zinc-950" aria-hidden>
         <Image
           src={sobreBg}
