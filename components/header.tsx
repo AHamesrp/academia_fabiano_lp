@@ -40,7 +40,7 @@ export function Header() {
               {menuOpen ? <X className="h-6 w-6" aria-hidden /> : <Menu className="h-6 w-6" aria-hidden />}
             </button>
 
-            <Button asChild className="relative z-[110] shrink-0 text-xs sm:text-sm max-w-[160px]">
+            <Button asChild className="relative z-110 shrink-0 text-xs sm:text-sm max-w-[160px]">
               <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Matricule-se Agora
               </Link>
@@ -51,7 +51,7 @@ export function Header() {
         {menuOpen && (
           <nav
             id="site-nav-menu"
-            className="absolute inset-x-0 top-full z-[200] border-t border-border bg-background shadow-lg"
+            className="absolute inset-x-0 top-full z-200 border-t border-border bg-background shadow-lg"
             aria-label="Navegação principal"
           >
             <div className="container mx-auto flex flex-col gap-1 px-4 py-3">
