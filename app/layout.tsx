@@ -13,8 +13,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'FabianoFisio Esporte e Saúde | Academia em Antônio Carlos/SC',
-  description: 'Academia completa em Antônio Carlos/SC. Hidroginástica, natação, pilates, fisioterapia, musculação, muaythai e odontologia. Saúde e esporte em um só lugar.',
+  title: 'FabianoFisio Esporte e Saúde',
+  description: 'Academia completa em São Pedro de Alcântara. Hidroginástica, natação, pilates, fisioterapia, musculação, muaythai e odontologia. Saúde e esporte em um só lugar.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -31,7 +31,6 @@ export const metadata: Metadata = {
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
   },
 }
 
