@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden pt-[max(5.5rem,calc(env(safe-area-inset-top,0px)+4.25rem))] pb-8 sm:min-h-[min(56vh,580px)] sm:items-start sm:justify-start sm:pb-12 lg:min-h-[min(62vh,640px)] lg:pt-32 lg:pb-16"
+      className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden pt-[max(5.5rem,calc(env(safe-area-inset-top,0px)+4.25rem))] pb-8 sm:min-h-[min(56vh,580px)] sm:items-start sm:justify-start sm:pb-12 lg:min-h-[min(52vh,640px)] lg:pt-32 lg:pb-16"
     >
       <div
         className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-zinc-950"
@@ -38,11 +38,11 @@ export function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <div
           className={`mx-auto w-full max-w-[min(100%,28rem)] p-8 sm:max-w-[min(100%,min(1440px,96vw))] sm:p-6 lg:p-8 ${heroUnifiedPanel}`}
         >
-          <div className="grid items-center gap-4 sm:gap-6 lg:grid-cols-[minmax(0,560px)_minmax(0,640px)] lg:justify-center lg:gap-8">
+          <div className="grid items-center gap-2 sm:gap-6 lg:grid-cols-[minmax(0,560px)_minmax(0,640px)] lg:justify-center lg:gap-8">
             <div className="mx-auto w-full max-w-[330px] sm:max-w-[560px]">
               <Image
                 src="/images/logo.jpg"

@@ -28,7 +28,7 @@ export function About() {
         />
       </div>
       <div
-        className="pointer-events-none absolute inset-0 z-1 bg-card/78 backdrop-blur-[2.5px] supports-backdrop-filter:bg-card/75"
+        className="pointer-events-none absolute inset-0 z-1 bg-card/78 backdrop-blur-[0px] supports-backdrop-filter:bg-card/75"
         aria-hidden
       />
 
