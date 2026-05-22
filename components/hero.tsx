@@ -8,7 +8,9 @@ const heroBgImageClass =
 
 /** Painel único (logo + texto) — bem transparente */
 const heroUnifiedPanel =
-  "rounded-2xl border border-white/10 bg-black/18 shadow-sm backdrop-blur-sm sm:backdrop-blur-md"
+  //"rounded-2xl border border-white/10 bg-black/18 shadow-sm backdrop-blur-sm sm:backdrop-blur-md"
+  "rounded-2xl border border-white/10 bg-black/18 shadow-sm backdrop-blur-[1.5px] sm:backdrop-blur-md"
+
 
 export function Hero() {
   return (

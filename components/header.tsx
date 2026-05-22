@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const WHATSAPP_URL =
-  "https://wa.me/5548996580677?text=Olá! Gostaria de me matricular na academia."
+  "https://wa.me/5548996580677?text=Olá! Gostaria de obter mais informações sobre a FabianoFisio."
 
 const navLinkClass =
   "text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
@@ -17,7 +17,7 @@ const navLinks = [
   { href: "/#sobre", label: "Sobre" },
   // { href: "/#diferencial", label: "Diferencial" },
   { href: "/#planos", label: "Planos" },
-  { href: "/#contato", label: "Contato" },
+  { href: "/#contato", label: "Informações" },
 ]
 
 export function Header() {
@@ -42,7 +42,7 @@ export function Header() {
 
             <Button asChild className="relative z-110 shrink-0 text-xs sm:text-sm max-w-[160px]">
               <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Matricule-se Agora
+                Contate-nos
               </Link>
             </Button>
           </div>

@@ -114,7 +114,7 @@ function PlanCardBackground({ src }: { src: string }) {
 
 function PlanCard({ plan }: { plan: PlanData }) {
   const isMusculacao = plan.id === "musculacao"
-  const whatsappMessage = `Olá, escolhi o ${plan.name} pelo site, quando posso começar?`
+  const whatsappMessage =`Olá, gostaria de me matricular no(a) ${plan.name}, como faço para começar ?`
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
