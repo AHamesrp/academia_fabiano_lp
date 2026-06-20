@@ -1,3 +1,3 @@
-landing page da academia do fabiano 
+# Landing Page of Fabiano´s Gym
 
-tudo pronto para deploy
+## I´m testing my frontend´s "stacks"
